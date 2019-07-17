@@ -1,5 +1,7 @@
 package com.example.demo.codegym.danang.entity;
 
+import com.example.demo.codegym.danang.codegym.danang.customvalidation.Author;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +16,7 @@ public class User {
     private long id;
 
     @NotBlank(message = "Name is mandatory")
+    @Author
     private String name;
 
     @NotBlank(message = "Email is mandatory")
